@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  des_tipo_pessoa: MyString
+
+two:
+  des_tipo_pessoa: MyString

@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  des_tipo_financeiro: MyString
+
+two:
+  des_tipo_financeiro: MyString

@@ -1,0 +1,22 @@
+<%= form_for(tipo_financeiro) do |f| %>
+  <% if tipo_financeiro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_financeiro.errors.count, "error") %> prohibited this tipo_financeiro from being saved:</h2>
+
+      <ul>
+      <% tipo_financeiro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :des_tipo_financeiro %>
+    <%= f.text_field :des_tipo_financeiro %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

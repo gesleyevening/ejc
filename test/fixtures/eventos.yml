@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  dta_evento: 2018-04-03
+  informacoes: MyString
+  imagem: 
+
+two:
+  titulo: MyString
+  dta_evento: 2018-04-03
+  informacoes: MyString
+  imagem: 

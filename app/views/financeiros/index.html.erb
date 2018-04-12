@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Financeiros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dta lancamento</th>
+      <th>Descricao</th>
+      <th>Valor</th>
+      <th>Tipo financeiro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @financeiros.each do |financeiro| %>
+      <tr>
+        <td><%= financeiro.dta_lancamento %></td>
+        <td><%= financeiro.descricao %></td>
+        <td><%= financeiro.valor %></td>
+        <td><%= financeiro.tipo_financeiro_id %></td>
+        <td><%= link_to 'Show', financeiro %></td>
+        <td><%= link_to 'Edit', edit_financeiro_path(financeiro) %></td>
+        <td><%= link_to 'Destroy', financeiro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Financeiro', new_financeiro_path %>

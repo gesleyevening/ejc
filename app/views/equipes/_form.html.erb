@@ -1,0 +1,32 @@
+<%= form_for(equipe) do |f| %>
+  <% if equipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(equipe.errors.count, "error") %> prohibited this equipe from being saved:</h2>
+
+      <ul>
+      <% equipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ano %>
+    <%= f.number_field :ano %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= f.label :observacoes %>
+    <%= f.text_field :observacoes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
