@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 20180405010540) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "financeiros", force: :cascade do |t|
+    t.date     "dta_lancamento"
+    t.string   "descricao"
+    t.integer  "tipo_financeiro_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+  
+
   create_table "pessoas", force: :cascade do |t|
     t.string   "nom_pessoa"
     t.date     "dta_nascimento"
