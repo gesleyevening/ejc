@@ -1481,6 +1481,14 @@ puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+<<<<<<< HEAD
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.2ms)
+=======
   Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
@@ -1811,6 +1819,7 @@ Processing by RailsAdmin::MainController#dashboard as HTML
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
   [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+<<<<<<< HEAD
   [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
   Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (94.4ms)
@@ -1980,5 +1989,726 @@ Processing by RailsAdmin::MainController#index as HTML
   [1m[36mFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
   Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (48.4ms)
 Completed 200 OK in 70ms (Views: 60.6ms | ActiveRecord: 0.7ms)
+=======
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (28.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (12.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (6.7ms)
+Completed 200 OK in 300ms (Views: 242.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.21 at 2018-04-14 00:41:25 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.3ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (106.7ms)
+Completed 200 OK in 164ms (Views: 141.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin/usuario?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.78 at 2018-04-14 00:42:18 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"usuario"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.3ms)
+Completed 200 OK in 120ms (Views: 80.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/tipo_pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-04-14 00:42:21 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_pessoa"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (41.4ms)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/equipe?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-14 00:42:23 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"equipe"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY equipes.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (43.6ms)
+Completed 200 OK in 66ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 10.240.1.21 at 2018-04-14 00:47:06 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (24.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (15.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (6.3ms)
+Completed 200 OK in 248ms (Views: 233.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/usuario?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.21 at 2018-04-14 00:48:57 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"usuario"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (36.8ms)
+Completed 200 OK in 59ms (Views: 50.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/usuario/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.21 at 2018-04-14 00:48:59 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"usuario"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (75.3ms)
+Completed 200 OK in 97ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/usuario/new" for 10.240.1.136 at 2018-04-14 00:49:02 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkBryvBDjpyxJkYI7O5/OvVlEsqNYL3fm/Zfl/DilKP1E++ubrfb8Zjp+QL67dtwsSeCgM4du3RfdLBrqWkxTQ==", "usuario"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>""}, "return_to"=>"http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/usuario", "_continue"=>"", "model_name"=>"usuario"}
+Redirected to http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/usuario
+Filter chain halted as :check_for_cancel rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/usuario" for 10.240.1.78 at 2018-04-14 00:49:03 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"usuario"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (47.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (10.3ms)
+Completed 200 OK in 267ms (Views: 258.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/usuario/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.136 at 2018-04-14 00:53:38 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"usuario"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (24.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (73.1ms)
+Completed 200 OK in 95ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/usuario/new" for 10.240.1.60 at 2018-04-14 00:53:50 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2HwQxfQjkP1VhmNHaWWJrKc7gYc7X1BMSxAnlrNn9Eq7L5ShatfFkHxJ3E1/Zi3m43kRzXgiVuePkshq6uxRpA==", "usuario"=>{"email"=>"teste", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>""}, "return_to"=>"http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/usuario", "_add_edit"=>"", "model_name"=>"usuario"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "teste"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (9.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (58.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (13.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.2ms)
+Completed 406 Not Acceptable in 440ms (Views: 238.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/usuario/new" for 10.240.1.78 at 2018-04-14 00:54:04 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xnzXGONrOqBoK9oNDsZwqBVheb2xctIuSk7nFnyLAc8vOnYSJuoE5eSeg4EJWIp1iHwQ0Mz+gGYQ5z9q25nOIQ==", "usuario"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>""}, "return_to"=>"http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/usuario", "_save"=>"", "model_name"=>"usuario"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "usuarios" ("created_at", "updated_at", "email", "encrypted_password", "current_sign_in_ip", "last_sign_in_ip") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2018-04-14 00:54:05.028358"], ["updated_at", "2018-04-14 00:54:05.028358"], ["email", "teste@email.com"], ["encrypted_password", "$2a$11$eXu.kqK4gU.qpWRw22Ssm.AnMBFJ7O1n6cG7hyVxdn12bkxr4VuBC"], ["current_sign_in_ip", ""], ["last_sign_in_ip", ""]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/usuario
+Completed 302 Found in 176ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/admin/usuario" for 10.240.0.231 at 2018-04-14 00:54:05 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"usuario"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (41.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (12.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.1ms)
+Completed 200 OK in 237ms (Views: 229.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/admin/usuario?model_name=usuario&sort=email&_pjax=%5Bdata-pjax-container%5D" for 10.240.1.60 at 2018-04-14 00:55:20 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"usuario", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.email asc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (98.5ms)
+Completed 200 OK in 128ms (Views: 113.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/usuario?model_name=usuario&sort=email" for 10.240.1.136 at 2018-04-14 00:55:21 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"usuario", "sort"=>"email"}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.email asc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (43.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (32.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (7.9ms)
+Completed 200 OK in 253ms (Views: 246.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.42 at 2018-04-14 00:59:23 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (25.5ms)
+Completed 200 OK in 88ms (Views: 56.6ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.233 at 2018-04-14 00:59:24 +0000
+Cannot render console from 10.240.0.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (23.6ms)
+Completed 200 OK in 68ms (Views: 52.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.136 at 2018-04-14 00:59:24 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (23.1ms)
+Completed 200 OK in 66ms (Views: 51.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/" for 10.240.0.118 at 2018-04-14 01:00:31 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.3ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (26.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (6.8ms)
+Completed 200 OK in 274ms (Views: 259.4ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/admin/" for 10.240.0.68 at 2018-04-14 01:01:12 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.4ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (1.0ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 744ms (ActiveRecord: 9.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:429:in `table_structure'
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:304:in `columns'
+activerecord (5.0.7) lib/active_record/connection_adapters/schema_cache.rb:56:in `columns'
+activerecord (5.0.7) lib/active_record/connection_adapters/schema_cache.rb:62:in `columns_hash'
+activerecord (5.0.7) lib/active_record/model_schema.rb:462:in `load_schema!'
+activerecord (5.0.7) lib/active_record/attributes.rb:233:in `load_schema!'
+activerecord (5.0.7) lib/active_record/attribute_decorators.rb:28:in `load_schema!'
+activerecord (5.0.7) lib/active_record/model_schema.rb:455:in `block in load_schema'
+/usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.0.7) lib/active_record/model_schema.rb:452:in `load_schema'
+activerecord (5.0.7) lib/active_record/model_schema.rb:348:in `columns'
+activerecord (5.0.7) lib/active_record/model_schema.rb:389:in `column_names'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:214:in `aggregate_column'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:237:in `execute_simple_calculation'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:207:in `perform_calculation'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:121:in `calculate'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:40:in `count'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/adapters/active_record.rb:43:in `count'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/config/actions/dashboard.rb:30:in `block (3 levels) in <class:Dashboard>'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/config/actions/dashboard.rb:28:in `each'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/config/actions/dashboard.rb:28:in `block (2 levels) in <class:Dashboard>'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/controllers/rails_admin/main_controller.rb:22:in `dashboard'
+actionpack (5.0.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+railties (5.0.7) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/remotipart-cd653ddc43bb/lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/admin/" for 10.240.0.116 at 2018-04-14 01:02:40 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.0.116 at 2018-04-14 01:02:41 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 601ms (Views: 581.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/usuarios/sign_in" for 10.240.1.78 at 2018-04-14 01:02:51 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UYzqc0saA4pN74raYFqgZU+TFhX4GHPz3RqzTwRiC/K4ykt5jps9z8Fa01ZnxFq40o5/eIWUIbuHs2szo3DEHA==", "usuario"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 228ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UYzqc0saA4pN74raYFqgZU+TFhX4GHPz3RqzTwRiC/K4ykt5jps9z8Fa01ZnxFq40o5/eIWUIbuHs2szo3DEHA==", "usuario"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 203ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios/sign_in" for 10.240.0.116 at 2018-04-14 01:02:56 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AESyr1qcWp1y6hMCffEZAaPQI6e9MA1m8emPmMauIQ7pAhOlnx1k2P5fSo56b+PcPs1KysC8Xy6rQFfkYbzu4A==", "usuario"=>{"email"=>"teste@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "usuarios" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["current_sign_in_at", "2018-04-14 01:02:56.534823"], ["last_sign_in_at", "2018-04-14 01:02:56.534823"], ["current_sign_in_ip", "10.240.0.116"], ["sign_in_count", 1], ["updated_at", "2018-04-14 01:02:56.536706"], ["id", 1]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/
+Completed 302 Found in 186ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/admin/" for 10.240.0.116 at 2018-04-14 01:02:56 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 613ms (ActiveRecord: 8.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:429:in `table_structure'
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:304:in `columns'
+activerecord (5.0.7) lib/active_record/connection_adapters/schema_cache.rb:56:in `columns'
+activerecord (5.0.7) lib/active_record/connection_adapters/schema_cache.rb:62:in `columns_hash'
+activerecord (5.0.7) lib/active_record/model_schema.rb:462:in `load_schema!'
+activerecord (5.0.7) lib/active_record/attributes.rb:233:in `load_schema!'
+activerecord (5.0.7) lib/active_record/attribute_decorators.rb:28:in `load_schema!'
+activerecord (5.0.7) lib/active_record/model_schema.rb:455:in `block in load_schema'
+/usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.0.7) lib/active_record/model_schema.rb:452:in `load_schema'
+activerecord (5.0.7) lib/active_record/model_schema.rb:348:in `columns'
+activerecord (5.0.7) lib/active_record/model_schema.rb:389:in `column_names'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:214:in `aggregate_column'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:237:in `execute_simple_calculation'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:207:in `perform_calculation'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:121:in `calculate'
+activerecord (5.0.7) lib/active_record/relation/calculations.rb:40:in `count'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/adapters/active_record.rb:43:in `count'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/config/actions/dashboard.rb:30:in `block (3 levels) in <class:Dashboard>'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/config/actions/dashboard.rb:28:in `each'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/config/actions/dashboard.rb:28:in `block (2 levels) in <class:Dashboard>'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/controllers/rails_admin/main_controller.rb:22:in `dashboard'
+actionpack (5.0.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+railties (5.0.7) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+/usr/local/rvm/gems/ruby-2.4.0/bundler/gems/remotipart-cd653ddc43bb/lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.2ms)
 
 
