@@ -1755,3 +1755,575 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/" for 10.240.0.42 at 2018-04-16 11:38:15 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 23ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.0.207 at 2018-04-16 11:38:21 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.1ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (30.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (13.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (5.0ms)
+Completed 200 OK in 1371ms (Views: 797.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 10.240.0.207 at 2018-04-16 11:39:26 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 22ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.0.207 at 2018-04-16 11:39:30 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.1ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (36.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (15.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (11.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.5ms)
+Completed 200 OK in 1164ms (Views: 578.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 10.240.0.171 at 2018-04-16 11:42:26 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.1.60 at 2018-04-16 11:42:31 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.1.78 at 2018-04-16 11:42:31 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 432ms (Views: 416.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/sign_up" for 10.240.0.233 at 2018-04-16 11:42:38 +0000
+Cannot render console from 10.240.0.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 10.240.0.171 at 2018-04-16 11:42:55 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5WXBgtPJM+h7KP4XsNAzfvaeFIrANmgsMMLoMGlC9qQ/2HqvhbG2uoBLs++hc8EvsfRq4KqUIpBoIKGIQZWUbQ==", "usuario"=>{"email"=>"gesley_123@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "gesley_123@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-04-16 11:42:55.742213"], ["updated_at", "2018-04-16 11:42:55.742213"], ["email", "gesley_123@hotmail.com"], ["encrypted_password", "$2a$11$fyYcRBSYIvDB07ZXBn1rX.3hKnbc430TlN9b/gA4nZye0poV.r07q"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "usuarios"."id" = ?[0m  [["updated_at", "2018-04-16 11:42:55.757148"], ["sign_in_count", 1], ["current_sign_in_at", "2018-04-16 11:42:55.756307"], ["last_sign_in_at", "2018-04-16 11:42:55.756307"], ["current_sign_in_ip", "10.240.0.171"], ["last_sign_in_ip", "10.240.0.171"], ["id", 2]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/
+Completed 302 Found in 229ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/admin/" for 10.240.0.171 at 2018-04-16 11:42:55 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.1ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (31.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (13.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (5.8ms)
+Completed 200 OK in 827ms (Views: 240.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/admin/usuario?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.60 at 2018-04-16 11:43:03 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"usuario"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (68.3ms)
+Completed 200 OK in 95ms (Views: 84.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tipo_pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:43:23 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (33.7ms)
+Completed 200 OK in 58ms (Views: 46.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/usuario?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:43:24 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"usuario"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY usuarios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (44.6ms)
+Completed 200 OK in 65ms (Views: 56.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/equipe?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.136 at 2018-04-16 11:43:46 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"equipe"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY equipes.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (48.7ms)
+Completed 200 OK in 83ms (Views: 64.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/evento?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:43:47 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"evento"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEvento Load (0.4ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY eventos.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (56.8ms)
+Completed 200 OK in 86ms (Views: 69.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/financeiro?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:43:49 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (32.8ms)
+Completed 200 OK in 58ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:43:50 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPessoa Load (0.3ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (41.6ms)
+Completed 200 OK in 73ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/tipo_financeiro?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.207 at 2018-04-16 11:43:51 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTipoFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY tipo_financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (37.5ms)
+Completed 200 OK in 63ms (Views: 50.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tipo_pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:43:51 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (48.7ms)
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tipo_pessoa/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.207 at 2018-04-16 11:43:55 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (21.3ms)
+Completed 200 OK in 42ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/tipo_pessoa/new" for 10.240.1.78 at 2018-04-16 11:44:03 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FEOo5rk9/XD4MLuGfVLq9jZl9ux6pi9jdb9G1GjY9LDodtDD2+/orlI+cPhvP3lMOpqMauSfGqaLUVdGucuvUA==", "tipo_pessoa"=>{"des_tipo_pessoa"=>"Jovem"}, "return_to"=>"http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_pessoa", "_save"=>"", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipo_pessoas" ("des_tipo_pessoa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["des_tipo_pessoa", "Jovem"], ["created_at", "2018-04-16 11:44:03.229572"], ["updated_at", "2018-04-16 11:44:03.229572"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_pessoa
+Completed 302 Found in 20ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/admin/tipo_pessoa" for 10.240.1.78 at 2018-04-16 11:44:03 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (36.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (9.1ms)
+Completed 200 OK in 218ms (Views: 209.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tipo_pessoa/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.21 at 2018-04-16 11:44:05 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (27.6ms)
+Completed 200 OK in 49ms (Views: 41.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/tipo_pessoa/new" for 10.240.1.21 at 2018-04-16 11:44:10 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q4pYbrGYg0Ow7AY6oQvmGKGt1fgtvFrEa3F1DlSGqJG/vyBL00qWnRrizUSzZnWirVKvfrOFbwGVn2SchZXzcQ==", "tipo_pessoa"=>{"des_tipo_pessoa"=>"Tio"}, "return_to"=>"http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_pessoa", "_save"=>"", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipo_pessoas" ("des_tipo_pessoa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["des_tipo_pessoa", "Tio"], ["created_at", "2018-04-16 11:44:10.664545"], ["updated_at", "2018-04-16 11:44:10.664545"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_pessoa
+Completed 302 Found in 23ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/admin/tipo_pessoa" for 10.240.1.21 at 2018-04-16 11:44:10 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (45.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (13.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.3ms)
+Completed 200 OK in 224ms (Views: 215.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/tipo_financeiro?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:44:14 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTipoFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY tipo_financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (40.8ms)
+Completed 200 OK in 60ms (Views: 52.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/tipo_financeiro/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.42 at 2018-04-16 11:44:18 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (18.9ms)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/tipo_financeiro/new" for 10.240.1.21 at 2018-04-16 11:44:26 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0j3XMDv4B9xo0sF2npgNmO0WTThC9hyUBmoSoz3wiBDGYrE3xokbbkZhbjQI7Hrh6Yc+6HPsz6IPyvPkXyz8IA==", "tipo_financeiro"=>{"des_tipo_financeiro"=>"Despesa"}, "return_to"=>"http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_financeiro", "_save"=>"", "model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipo_financeiros" ("des_tipo_financeiro", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["des_tipo_financeiro", "Despesa"], ["created_at", "2018-04-16 11:44:26.729745"], ["updated_at", "2018-04-16 11:44:26.729745"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_financeiro
+Completed 302 Found in 20ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/admin/tipo_financeiro" for 10.240.1.78 at 2018-04-16 11:44:26 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mTipoFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY tipo_financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (36.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (13.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.8ms)
+Completed 200 OK in 232ms (Views: 224.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/tipo_financeiro/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.21 at 2018-04-16 11:44:29 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (19.0ms)
+Completed 200 OK in 39ms (Views: 31.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/tipo_financeiro/new" for 10.240.0.42 at 2018-04-16 11:44:41 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sAo42HDMQhcAEkKADxtZ57dxFXMy3ULqNIy+pqOrHNmkVV7fjb1epS6h7cKZby6es+BmowPHkdw9LF/hwXdo6Q==", "tipo_financeiro"=>{"des_tipo_financeiro"=>"Recebido"}, "return_to"=>"http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_financeiro", "_save"=>"", "model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tipo_financeiros" ("des_tipo_financeiro", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["des_tipo_financeiro", "Recebido"], ["created_at", "2018-04-16 11:44:41.946945"], ["updated_at", "2018-04-16 11:44:41.946945"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/tipo_financeiro
+Completed 302 Found in 23ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/admin/tipo_financeiro" for 10.240.0.116 at 2018-04-16 11:44:42 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"tipo_financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mTipoFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY tipo_financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (38.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (13.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.5ms)
+Completed 200 OK in 209ms (Views: 201.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.118 at 2018-04-16 11:44:45 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPessoa Load (0.3ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (34.5ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/financeiro?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.116 at 2018-04-16 11:44:48 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"financeiro"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mFinanceiro Load (0.3ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY financeiros.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (35.3ms)
+Completed 200 OK in 56ms (Views: 47.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/evento?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-04-16 11:44:51 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"evento"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEvento Load (0.3ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY eventos.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (32.4ms)
+Completed 200 OK in 53ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/equipe?_pjax=%5Bdata-pjax-container%5D" for 10.240.2.147 at 2018-04-16 11:44:53 +0000
+Cannot render console from 10.240.2.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"equipe"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY equipes.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (45.7ms)
+Completed 200 OK in 67ms (Views: 58.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-04-16 11:44:56 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (23.3ms)
+Completed 200 OK in 239ms (Views: 50.3ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/usuarios/sign_out" for 10.240.0.68 at 2018-04-16 15:42:45 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Act4hfu9a9XuBdz8sqz6Vb9CMXG35u50vvM0vilM7u4BsYhvZsWg6at9/fUQKkAV89IwDDp6R2pVqa/AvQqBAw=="}
+  [1m[36mUsuario Load (5.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/
+Completed 302 Found in 35ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 10.240.0.116 at 2018-04-16 15:42:45 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
