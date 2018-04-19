@@ -5,7 +5,7 @@ class Pessoa < ApplicationRecord
     validates_presence_of :num_ano_inicial, message: 'Ano de início deve ser infomado!'
     validates_presence_of :des_endereco, message: 'Endereço deve ser infomado!'
     validates_presence_of :num_celular, message: 'Celular deve ser infomado!'
-    validates_presence_of :des_email, message: 'Email deve ser infomado!!'
-    validates_presence_of :tipo_pessoa_id, message: 'não pode ser deixado em branco'
+    validates_presence_of :des_email, message: 'Email deve ser infomado!'
+    validates_presence_of :tipo_pessoa_id, message: 'Deve ser informado o tipo da pessoa!'
     
 end
