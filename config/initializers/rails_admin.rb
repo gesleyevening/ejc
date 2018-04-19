@@ -1,4 +1,6 @@
 RailsAdmin.config do |config|
+  
+  config.main_app_name = ["EJC Santo Antônio Vila Belém", ""]
 
   ### Popular gems integration
 
