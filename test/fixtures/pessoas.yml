@@ -2,22 +2,22 @@
 
 one:
   nom_pessoa: MyString
-  dta_nascimento: 2018-04-03
-  num_ano_inicial: 
+  dta_nascimento: 2018-04-19
+  num_ano_inicial: 1
   des_endereco: MyString
   num_telefone: MyString
   num_celular: MyString
   des_email: MyString
   observacao: MyString
-  tipo_pessoa: 
+  tipo_pessoa_id: 1
 
 two:
   nom_pessoa: MyString
-  dta_nascimento: 2018-04-03
-  num_ano_inicial: 
+  dta_nascimento: 2018-04-19
+  num_ano_inicial: 1
   des_endereco: MyString
   num_telefone: MyString
   num_celular: MyString
   des_email: MyString
   observacao: MyString
-  tipo_pessoa: 
+  tipo_pessoa_id: 1
