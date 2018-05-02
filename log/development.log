@@ -6287,3 +6287,848 @@ Processing by RailsAdmin::MainController#edit as JS
 Completed 200 OK in 93ms (Views: 72.7ms | ActiveRecord: 2.5ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePessoas (20180403203210)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom_pessoa" varchar, "dta_nascimento" time, "num_ano_inicial" integer, "des_endereco" varchar, "num_telefone" varchar, "num_celular" varchar, "des_email" varchar, "observacao" varchar, "tipo_pessoa_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403203210"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEquipes (20180403230814)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "equipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ano" integer, "nome" varchar, "observacoes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230814"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTipoPessoas (20180403230904)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tipo_pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "des_tipo_pessoa" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230904"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTipoFinanceiros (20180403231114)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "tipo_financeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "des_tipo_financeiro" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231114"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEventos (20180403231208)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "dta_evento" date, "informacoes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231208"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20180405010519)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010519"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010540"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFinanceiros (20180413204810)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "financeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dta_lancamento" date, "descricao" varchar, "tipo_financeiro_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180413204810"]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-02 22:32:17.285030"], ["updated_at", "2018-05-02 22:32:17.285030"]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/" for 10.240.0.171 at 2018-05-02 22:32:44 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (71.0ms)
+Completed 200 OK in 96ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admim" for 10.240.1.136 at 2018-05-02 22:32:52 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admim"):
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (7.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.4ms)
+Started GET "/admin" for 10.240.0.207 at 2018-05-02 22:32:58 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.1.78 at 2018-05-02 22:32:58 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 605ms (Views: 581.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/sign_up" for 10.240.0.116 at 2018-05-02 22:33:04 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 10.240.1.60 at 2018-05-02 22:33:17 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Atzv3E2+UA6dxZ7qC5vNP/zjnFSMANVHk9GicsWD9r48aWJ4mci/ptyDGevxUQHS10rRIa4y2ul9g8l+fOXnnw==", "usuario"=>{"email"=>"ejc@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "ejc@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 243ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/usuarios" for 10.240.0.207 at 2018-05-02 22:33:32 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ibRh5cvwF4OGa5It8ioAaM/6VB8dCG41J8uIOFpeqB8LVdwxHEeKy8RtR25EIgpf/IB29hTz0Q5rFp6FHILGg==", "usuario"=>{"email"=>"ejc@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "ejc@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (16.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-05-02 22:33:32.356036"], ["updated_at", "2018-05-02 22:33:32.356036"], ["email", "ejc@email.com"], ["encrypted_password", "$2a$11$QCvwqPw7BHDsierK8GpLzudJQUT2.CRL/QaIazqsKjIEKfErXY3GO"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "usuarios" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "usuarios"."id" = ?[0m  [["updated_at", "2018-05-02 22:33:32.393379"], ["sign_in_count", 1], ["current_sign_in_at", "2018-05-02 22:33:32.392003"], ["last_sign_in_at", "2018-05-02 22:33:32.392003"], ["current_sign_in_ip", "10.240.0.207"], ["last_sign_in_ip", "10.240.0.207"], ["id", 1]]
+  [1m[35m (17.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/
+Completed 302 Found in 211ms (ActiveRecord: 49.2ms)
+
+
+Started GET "/admin/" for 10.240.0.207 at 2018-05-02 22:33:32 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.1ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.1ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from count at /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/lib/rails_admin/adapters/active_record.rb:43)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.1ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.1ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (29.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (15.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (5.9ms)
+Completed 200 OK in 937ms (Views: 241.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/admin/pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.136 at 2018-05-02 22:33:38 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPessoa Load (0.4ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (41.7ms)
+Completed 200 OK in 83ms (Views: 64.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/pessoa/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-05-02 22:33:40 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_select.html.haml (35.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (207.7ms)
+Completed 200 OK in 233ms (Views: 221.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22)
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePessoas (20180403203210)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom_pessoa" varchar, "dta_nascimento" datetime, "num_ano_inicial" integer, "des_endereco" varchar, "num_telefone" varchar, "num_celular" varchar, "des_email" varchar, "observacao" varchar, "tipo_pessoa_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403203210"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEquipes (20180403230814)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "equipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ano" integer, "nome" varchar, "observacoes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230814"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTipoPessoas (20180403230904)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "tipo_pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "des_tipo_pessoa" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230904"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTipoFinanceiros (20180403231114)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "tipo_financeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "des_tipo_financeiro" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231114"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEventos (20180403231208)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "dta_evento" date, "informacoes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231208"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20180405010519)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010519"]]
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010540"]]
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFinanceiros (20180413204810)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "financeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dta_lancamento" date, "descricao" varchar, "tipo_financeiro_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180413204810"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-02 22:34:41.171426"], ["updated_at", "2018-05-02 22:34:41.171426"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/" for 10.240.1.21 at 2018-05-02 22:34:55 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 29ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.0.231 at 2018-05-02 22:34:59 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.0.231 at 2018-05-02 22:34:59 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 471ms (Views: 460.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 10.240.0.233 at 2018-05-02 22:35:02 +0000
+Cannot render console from 10.240.0.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 10.240.1.136 at 2018-05-02 22:35:13 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zsni51SzXLgubohe7ZXc3jFo+RnxvCxLY5JlqERkkrZYfG9DgMWzEG8oD18XXxAzGsG0bNOOI+WNwA6k/QKDlw==", "usuario"=>{"email"=>"ejc@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "ejc@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (13.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-05-02 22:35:14.158620"], ["updated_at", "2018-05-02 22:35:14.158620"], ["email", "ejc@email.com"], ["encrypted_password", "$2a$11$JaEIOREtM9eROfZ1fgRMUevO6IpwMPhbYvpeak79NlXJsbllT5Xmi"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "usuarios" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "usuarios"."id" = ?[0m  [["updated_at", "2018-05-02 22:35:14.193371"], ["sign_in_count", 1], ["current_sign_in_at", "2018-05-02 22:35:14.191977"], ["last_sign_in_at", "2018-05-02 22:35:14.191977"], ["current_sign_in_ip", "10.240.1.136"], ["last_sign_in_ip", "10.240.1.136"], ["id", 1]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/
+Completed 302 Found in 237ms (ActiveRecord: 41.7ms)
+
+
+Started GET "/admin/" for 10.240.0.231 at 2018-05-02 22:35:14 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.1ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.1ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.1ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.1ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.1ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (27.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (6.2ms)
+Completed 200 OK in 940ms (Views: 215.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/admin/pessoa?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-05-02 22:35:17 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPessoa Load (0.4ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (63.4ms)
+Completed 200 OK in 106ms (Views: 84.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/pessoa/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-05-02 22:35:19 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_select.html.haml (74.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (11.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (130.5ms)
+Completed 200 OK in 160ms (Views: 145.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tipo_pessoa/new?modal=true" for 10.240.0.233 at 2018-05-02 22:35:38 +0000
+Cannot render console from 10.240.0.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"modal"=>"true", "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas" ORDER BY pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (18.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml (47.2ms)
+Completed 200 OK in 63ms (Views: 50.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/tipo_pessoa/new" for 10.240.1.21 at 2018-05-02 22:35:43 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slkIfddihCOICNRboM54+K+yEvFA44ZtayLPTyvtA2IuBVVvKOHiiFpnVp3ohAuHBHZmfpr+6p2f3jReCm2/Fg==", "tipo_pessoa"=>{"des_tipo_pessoa"=>"Jovem", "pessoa_ids"=>["", ""]}, "model_name"=>"tipo_pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPessoa Load (0.3ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "tipo_pessoas" ("des_tipo_pessoa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["des_tipo_pessoa", "Jovem"], ["created_at", "2018-05-02 22:35:43.315437"], ["updated_at", "2018-05-02 22:35:43.315437"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/admin/pessoa/new" for 10.240.0.116 at 2018-05-02 22:35:45 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ooXCDyMydnq2yZQWC0ROJaela6z+6xxi3MNXu1mDuYP2NslvJDSDdWz5C/KhQhdaKH6450MZMXiwdU9Z5T7zjA==", "pessoa"=>{"nom_pessoa"=>"Teste", "dta_nascimento"=>"Maio 07, 2018 19:33", "num_ano_inicial"=>"2018", "des_endereco"=>"Rua X", "num_telefone"=>"", "num_celular"=>"39851525265", "des_email"=>"testejovem@email.com", "observacao"=>"Teste", "tipo_pessoa_id"=>"1"}, "return_to"=>"http://ejc-admin-gesleyevening.c9users.io:8080/admin/pessoa", "_save"=>"", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" WHERE "tipo_pessoas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "pessoas" ("nom_pessoa", "num_ano_inicial", "des_endereco", "num_telefone", "num_celular", "des_email", "observacao", "tipo_pessoa_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nom_pessoa", "Teste"], ["num_ano_inicial", 2018], ["des_endereco", "Rua X"], ["num_telefone", ""], ["num_celular", "39851525265"], ["des_email", "testejovem@email.com"], ["observacao", "Teste"], ["tipo_pessoa_id", 1], ["created_at", "2018-05-02 22:35:45.111837"], ["updated_at", "2018-05-02 22:35:45.111837"]]
+  [1m[35m (14.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/pessoa
+Completed 302 Found in 43ms (ActiveRecord: 16.9ms)
+
+
+Started GET "/admin/pessoa" for 10.240.1.136 at 2018-05-02 22:35:45 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mPessoa Load (0.3ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY pessoas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" WHERE "tipo_pessoas"."id" = 1[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (50.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (8.9ms)
+Completed 200 OK in 236ms (Views: 222.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/pessoa/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.42 at 2018-05-02 22:39:23 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mTipoPessoa Load (0.3ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_select.html.haml (21.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (8.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (68.6ms)
+Completed 200 OK in 96ms (Views: 83.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/pessoa/new" for 10.240.1.78 at 2018-05-02 22:41:47 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (21.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_select.html.haml (85.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (12.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (237.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (23.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (42.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (16.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (27.5ms)
+Completed 200 OK in 1557ms (Views: 915.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/pessoa/new" for 10.240.0.116 at 2018-05-02 22:42:37 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (7.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.1ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_select.html.haml (22.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (7.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (108.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (22.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (32.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (12.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (18.4ms)
+Completed 200 OK in 1628ms (Views: 790.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/pessoa/new" for 10.240.0.231 at 2018-05-02 22:43:13 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"pessoa"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (3.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY tipo_pessoas.id desc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_filtering_select.html.haml (88.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (29.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (233.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (25.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (46.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (17.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (27.8ms)
+Completed 200 OK in 1573ms (Views: 874.6ms | ActiveRecord: 3.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/rvm/gems/ruby-2.4.0/bin/rake:22)
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePessoas (20180403203210)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom_pessoa" varchar, "dta_nascimento" datetime, "num_ano_inicial" integer, "des_endereco" varchar, "num_telefone" varchar, "num_celular" varchar, "des_email" varchar, "observacao" varchar, "tipo_pessoa_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403203210"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEquipes (20180403230814)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "equipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ano" integer, "nome" varchar, "observacoes" varchar, "integrantes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230814"]]
+  [1m[35m (16.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTipoPessoas (20180403230904)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tipo_pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "des_tipo_pessoa" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230904"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTipoFinanceiros (20180403231114)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "tipo_financeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "des_tipo_financeiro" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231114"]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEventos (20180403231208)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "dta_evento" date, "informacoes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231208"]]
+  [1m[35m (18.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20180405010519)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010519"]]
+  [1m[35m (16.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010540"]]
+  [1m[35m (22.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFinanceiros (20180413204810)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "financeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dta_lancamento" date, "descricao" varchar, "tipo_financeiro_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180413204810"]]
+  [1m[35m (18.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-02 23:12:18.439259"], ["updated_at", "2018-05-02 23:12:18.439259"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/" for 10.240.0.171 at 2018-05-02 23:12:31 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 26ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.1.60 at 2018-05-02 23:12:36 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.0.116 at 2018-05-02 23:12:37 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 484ms (Views: 472.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 10.240.1.78 at 2018-05-02 23:12:40 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 10.240.1.78 at 2018-05-02 23:12:53 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2ljSjWPgEl2mYqCjzCHX8dqjOTsSXlTHpK99tllJP2B3O7u4flv4TffDYN1+kuy7MPBkc57dv3wwNb6YAM13A==", "usuario"=>{"email"=>"ejc@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "ejc@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "usuarios" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-05-02 23:12:53.609801"], ["updated_at", "2018-05-02 23:12:53.609801"], ["email", "ejc@email.com"], ["encrypted_password", "$2a$11$Ra1c1gbBDljJYJy1xeietuwSE3PWCom2rkc41..xyYM3vK2i8vZ3K"]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "usuarios" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "usuarios"."id" = ?[0m  [["updated_at", "2018-05-02 23:12:53.634319"], ["sign_in_count", 1], ["current_sign_in_at", "2018-05-02 23:12:53.632484"], ["last_sign_in_at", "2018-05-02 23:12:53.632484"], ["current_sign_in_ip", "10.240.1.78"], ["last_sign_in_ip", "10.240.1.78"], ["id", 1]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/
+Completed 302 Found in 230ms (ActiveRecord: 32.5ms)
+
+
+Started GET "/admin/" for 10.240.0.118 at 2018-05-02 23:12:53 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.1ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.1ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.1ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.1ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (26.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (5.9ms)
+Completed 200 OK in 979ms (Views: 229.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/admin/equipe?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.68 at 2018-05-02 23:13:25 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"equipe"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY equipes.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (48.7ms)
+Completed 200 OK in 81ms (Views: 65.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/equipe/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.1.78 at 2018-05-02 23:13:27 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"equipe"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (32.5ms)
+Completed 200 OK in 56ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+

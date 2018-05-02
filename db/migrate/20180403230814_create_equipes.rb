@@ -4,6 +4,7 @@ class CreateEquipes < ActiveRecord::Migration[5.0]
       t.integer :ano
       t.string :nome
       t.string :observacoes
+      t.string :integrantes
 
       t.timestamps
     end

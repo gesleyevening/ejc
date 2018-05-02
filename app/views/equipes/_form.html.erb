@@ -25,6 +25,11 @@
     <%= f.label :observacoes %>
     <%= f.text_field :observacoes %>
   </div>
+  
+  <div class="field">
+    <%= f.label :integrantes %>
+    <%= f.collection_select(:integrantes, :pessoa_id, Pessoa.all, :id, :integrantes, prompt: true) %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
