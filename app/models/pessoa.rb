@@ -8,4 +8,6 @@ class Pessoa < ApplicationRecord
     validates_presence_of :des_email, message: 'Email deve ser infomado!'
     validates_presence_of :tipo_pessoa_id, message: 'Deve ser informado o tipo da pessoa!'
     
+    belongs_to :tipo_pessoa
+    
 end
