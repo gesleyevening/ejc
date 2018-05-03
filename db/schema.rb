@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180426191011) do
     t.integer  "ano"
     t.string   "nome"
     t.string   "observacoes"
+    t.string   "integrantes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -45,7 +46,7 @@ ActiveRecord::Schema.define(version: 20180426191011) do
 
   create_table "pessoas", force: :cascade do |t|
     t.string   "nom_pessoa"
-    t.date     "dta_nascimento"
+    t.datetime "dta_nascimento"
     t.integer  "num_ano_inicial"
     t.string   "des_endereco"
     t.string   "num_telefone"
