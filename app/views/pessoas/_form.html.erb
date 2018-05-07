@@ -53,8 +53,12 @@
 
   <div class="field">
     <%= f.label :tipo_pessoa %>
+<<<<<<< HEAD
     <%= f.text_field :tipo_pessoa %>
     <%= f.collection_select(:tipo_pessoa, TipoPessoa.all, :id, :name, :include_blank => 'SELECT FIRST STATE') %>
+=======
+    <%= f.collection_select(:tipo_pessoa, :pessoa_id, TipoPessoa.all, :id, :des_tipo_pessoa, prompt: true) %>
+>>>>>>> 29ae7b9175990d990110e96260a99655b0fc5f99
   </div>
 
   <div class="actions">
