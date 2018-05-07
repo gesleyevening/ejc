@@ -54,7 +54,7 @@
   <div class="field">
     <%= f.label :tipo_pessoa %>
     <%= f.text_field :tipo_pessoa %>
-    <%= f.collection_select(:tipo_pessoa, TipoPessoa.all, :id, :name) %>
+    <%= f.collection_select(:tipo_pessoa, TipoPessoa.all, :id, :name, :include_blank => 'SELECT FIRST STATE') %>
   </div>
 
   <div class="actions">
