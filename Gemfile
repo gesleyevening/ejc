@@ -35,8 +35,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'remotipart', github:'mshibuya/remotipart'
 gem 'rails_admin', github:'sferik/rails_admin'
-gem 'rails_admin_rollincode', '~> 1.0'
+gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
 gem 'devise'
+gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
 
 group :production do
   gem 'pg', '0.18.4'
