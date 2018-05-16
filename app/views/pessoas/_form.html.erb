@@ -53,7 +53,8 @@
 
   <div class="field">
     <%= f.label :tipo_pessoa %>
-    <%= f.collection_select(:tipo_pessoa, :pessoa_id, TipoPessoa.all, :id, :des_tipo_pessoa, prompt: true) %>
+    <%= f.text_field :tipo_pessoa %>
+    <%= f.collection_select(:tipo_pessoa, TipoPessoa.all, :id, :name, :selected => @post.tipo_pessoa.id ) %>
   </div>
 
   <div class="actions">
