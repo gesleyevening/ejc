@@ -7979,3 +7979,68 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 10.240.0.68 at 2018-05-17 00:17:28 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 29ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.0.171 at 2018-05-17 00:17:34 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.0.42 at 2018-05-17 00:17:35 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 642ms (Views: 620.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/usuarios/sign_in" for 10.240.1.21 at 2018-05-17 00:18:03 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UuMk+F1X1AGqq3iXccLYtqYy5c36ALohLZ9adDHttYXdubi0KB4IaaU0ym8TV9B9xqgbud/N+M2h6tXj8lHApQ==", "usuario"=>{"email"=>"ejc@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "ejc@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "usuarios" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["current_sign_in_at", "2018-05-17 00:18:03.765396"], ["last_sign_in_at", "2018-05-10 00:27:07.417553"], ["current_sign_in_ip", "10.240.1.21"], ["last_sign_in_ip", "10.240.1.78"], ["sign_in_count", 8], ["updated_at", "2018-05-17 00:18:03.768378"], ["id", 3]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-minha-maquina-eiderson.c9users.io:8080/admin/
+Completed 302 Found in 215ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/admin/" for 10.240.1.21 at 2018-05-17 00:18:03 +0000
+Cannot render console from 10.240.1.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "financeiros"[0m
+  [1m[36mFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "financeiros".* FROM "financeiros" ORDER BY "financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pessoas"[0m
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT  "pessoas".* FROM "pessoas" ORDER BY "pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_financeiros"[0m
+  [1m[36mTipoFinanceiro Load (0.2ms)[0m  [1m[34mSELECT  "tipo_financeiros".* FROM "tipo_financeiros" ORDER BY "tipo_financeiros"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tipo_pessoas"[0m
+  [1m[36mTipoPessoa Load (0.2ms)[0m  [1m[34mSELECT  "tipo_pessoas".* FROM "tipo_pessoas" ORDER BY "tipo_pessoas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (42.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (19.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (9.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (7.4ms)
+Completed 200 OK in 1098ms (Views: 347.2ms | ActiveRecord: 9.2ms)
+
+
