@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @tio.nome %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @tio.data_nascimento %>
+</p>
+
+<p>
+  <strong>Ano inicio:</strong>
+  <%= @tio.ano_inicio %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @tio.endereco %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @tio.telefone %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @tio.celular %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @tio.email %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @tio.observacao %>
+</p>
+
+<%= link_to 'Edit', edit_tio_path(@tio) %> |
+<%= link_to 'Back', tios_path %>

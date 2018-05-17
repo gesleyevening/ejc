@@ -1,2 +1,0 @@
-class EquipePessoa < ApplicationRecord
-end

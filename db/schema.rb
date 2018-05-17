@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426191011) do
+ActiveRecord::Schema.define(version: 20180517003513) do
+
+  create_table "contas_a_pagars", force: :cascade do |t|
+    t.date     "data_lancamento"
+    t.string   "descricao"
+    t.float    "valor"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "contas_a_recebers", force: :cascade do |t|
+    t.date     "data_lancamento"
+    t.string   "descricao"
+    t.float    "valor"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "equipe_pessoas", force: :cascade do |t|
     t.integer  "equipe_id"
@@ -44,6 +60,19 @@ ActiveRecord::Schema.define(version: 20180426191011) do
     t.datetime "updated_at",         null: false
   end
 
+  create_table "jovems", force: :cascade do |t|
+    t.string   "nome"
+    t.date     "data_nascimento"
+    t.integer  "ano_inicio"
+    t.string   "endereco"
+    t.string   "telefone"
+    t.string   "celular"
+    t.string   "email"
+    t.string   "observacao"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "pessoas", force: :cascade do |t|
     t.string   "nom_pessoa"
     t.datetime "dta_nascimento"
@@ -54,6 +83,19 @@ ActiveRecord::Schema.define(version: 20180426191011) do
     t.string   "des_email"
     t.string   "observacao"
     t.integer  "tipo_pessoa_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "tios", force: :cascade do |t|
+    t.string   "nome"
+    t.date     "data_nascimento"
+    t.integer  "ano_inicio"
+    t.string   "endereco"
+    t.string   "telefone"
+    t.string   "celular"
+    t.string   "email"
+    t.string   "observacao"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

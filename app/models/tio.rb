@@ -1,0 +1,2 @@
+class Tio < ApplicationRecord
+end
