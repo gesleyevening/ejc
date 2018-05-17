@@ -28,7 +28,7 @@
   
   <div class="field">
     <%= f.label :integrantes %>
-    <%= f.collection_select(:integrantes, :pessoa_id, Pessoa.all, :id, :integrantes, prompt: true) %>
+    <%= f.text_field :integrantes %>
   </div>
 
   <div class="actions">

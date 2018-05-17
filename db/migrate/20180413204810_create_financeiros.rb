@@ -4,8 +4,8 @@ class CreateFinanceiros < ActiveRecord::Migration[5.0]
       t.date :dta_lancamento
       t.string :descricao
       t.integer :tipo_financeiro_id
-      t.datetime :created_at
-      t.datetime :updated_at
+      t.datetime :criado_em
+      t.datetime :atualizado_em
      
       t.timestamps
     end
