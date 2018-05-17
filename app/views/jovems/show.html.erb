@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @jovem.nome %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @jovem.data_nascimento %>
+</p>
+
+<p>
+  <strong>Ano inicio:</strong>
+  <%= @jovem.ano_inicio %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @jovem.endereco %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @jovem.telefone %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @jovem.celular %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @jovem.email %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @jovem.observacao %>
+</p>
+
+<%= link_to 'Edit', edit_jovem_path(@jovem) %> |
+<%= link_to 'Back', jovems_path %>

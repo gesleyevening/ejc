@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Data nascimento</th>
+      <th>Ano inicio</th>
+      <th>Endereco</th>
+      <th>Telefone</th>
+      <th>Celular</th>
+      <th>Email</th>
+      <th>Observacao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tios.each do |tio| %>
+      <tr>
+        <td><%= tio.nome %></td>
+        <td><%= tio.data_nascimento %></td>
+        <td><%= tio.ano_inicio %></td>
+        <td><%= tio.endereco %></td>
+        <td><%= tio.telefone %></td>
+        <td><%= tio.celular %></td>
+        <td><%= tio.email %></td>
+        <td><%= tio.observacao %></td>
+        <td><%= link_to 'Show', tio %></td>
+        <td><%= link_to 'Edit', edit_tio_path(tio) %></td>
+        <td><%= link_to 'Destroy', tio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tio', new_tio_path %>

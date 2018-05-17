@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data lancamento:</strong>
+  <%= @contas_a_pagar.data_lancamento %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @contas_a_pagar.descricao %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @contas_a_pagar.valor %>
+</p>
+
+<%= link_to 'Edit', edit_contas_a_pagar_path(@contas_a_pagar) %> |
+<%= link_to 'Back', contas_a_pagars_path %>
