@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data lancamento:</strong>
+  <%= @contas_a_receber.data_lancamento %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @contas_a_receber.descricao %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @contas_a_receber.valor %>
+</p>
+
+<%= link_to 'Edit', edit_contas_a_receber_path(@contas_a_receber) %> |
+<%= link_to 'Back', contas_a_recebers_path %>

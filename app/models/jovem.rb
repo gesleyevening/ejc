@@ -1,0 +1,2 @@
+class Jovem < ApplicationRecord
+end

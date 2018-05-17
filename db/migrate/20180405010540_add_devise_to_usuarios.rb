@@ -5,14 +5,14 @@ class AddDeviseToUsuarios < ActiveRecord::Migration[5.0]
     change_table :usuarios do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
-      t.string :senha_criptografada, null: false, default: ""
+      t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
       t.string   :token_de_reenvio_de_senha
       t.datetime :reset_de_senha_enviado_em
 
       ## Rememberable
-      t.datetime :cricao_de_lembranca_em
+      t.datetime :criação_de_lembrança_emed_at
 
       ## Trackable
       t.integer  :logado_na_conta, default: 0, null: false
@@ -38,7 +38,7 @@ class AddDeviseToUsuarios < ActiveRecord::Migration[5.0]
     end
 
     add_index :usuarios, :email,                unique: true
-    add_index :usuarios, :token_de_resete_de_senha, unique: true
+    add_index :usuarios, :reset_password_token, unique: true
     # add_index :usuarios, :confirmation_token,   unique: true
     # add_index :usuarios, :unlock_token,         unique: true
   end

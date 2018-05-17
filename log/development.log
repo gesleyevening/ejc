@@ -1948,3 +1948,297 @@ puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pessoas" ("nom_pessoa", "dta_nascimento", "num_ano_inicial", "des_endereco", "num_telefone", "num_celular", "des_email", "observacao", "tipo_pessoa_id", "created_at", "updated_at", "id") VALUES ('MyString', '2018-04-19', 1, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, '2018-05-17 00:41:45.914472', '2018-05-17 00:41:45.914472', 298486374)[0m
   [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 10.240.0.231 at 2018-05-17 00:46:05 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "senha_criptografada" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "token_de_reenvio_de_senha" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_de_senha_enviado_em" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "cricao_de_lembranca_em" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "logado_na_conta" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "login_atual_em" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_login_em" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ip_atual_logado" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_ip_logado" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_token_de_resete_de_senha" ON "usuarios" ("token_de_resete_de_senha")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "token_de_reenvio_de_senha" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_de_senha_enviado_em" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "criação_de_lembrança_emed_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "logado_na_conta" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "login_atual_em" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_login_em" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ip_atual_logado" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_ip_logado" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 10.240.0.231 at 2018-05-17 00:51:36 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "token_de_reenvio_de_senha" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_de_senha_enviado_em" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "criação_de_lembrança_emed_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "logado_na_conta" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "login_atual_em" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_login_em" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ip_atual_logado" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_ip_logado" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-17 00:52:35.065942"], ["updated_at", "2018-05-17 00:52:35.065942"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEquipes (20180403230814)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "equipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ano" integer, "nome" varchar, "observacoes" varchar, "integrantes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403230814"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEventos (20180403231208)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "dta_evento" date, "informacoes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403231208"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20180405010519)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405010519"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsuarios (20180405010540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "token_de_reenvio_de_senha" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "reset_de_senha_enviado_em" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "criação_de_lembrança_emed_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "logado_na_conta" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "login_atual_em" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_login_em" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ip_atual_logado" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "ultimo_ip_logado" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 10.240.0.68 at 2018-05-17 00:53:09 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.4ms)
