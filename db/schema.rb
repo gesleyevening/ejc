@@ -28,18 +28,10 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "equipe_pessoas", force: :cascade do |t|
-    t.integer  "equipe_id"
-    t.integer  "pessoa_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "equipes", force: :cascade do |t|
     t.integer  "ano"
     t.string   "nome"
     t.string   "observacoes"
-    t.string   "integrantes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -75,7 +67,7 @@ ActiveRecord::Schema.define(version: 20180517003513) do
 
   create_table "pessoas", force: :cascade do |t|
     t.string   "nom_pessoa"
-    t.datetime "dta_nascimento"
+    t.date     "dta_nascimento"
     t.integer  "num_ano_inicial"
     t.string   "des_endereco"
     t.string   "num_telefone"
