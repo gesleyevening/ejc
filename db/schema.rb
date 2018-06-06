@@ -28,13 +28,6 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "equipe_pessoas", force: :cascade do |t|
-    t.integer  "equipe_id"
-    t.integer  "pessoa_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "equipes", force: :cascade do |t|
     t.integer  "ano"
     t.string   "nome"
@@ -56,6 +49,8 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.date     "dta_lancamento"
     t.string   "descricao"
     t.integer  "tipo_financeiro_id"
+    t.datetime "criado_em"
+    t.datetime "atualizado_em"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
@@ -73,20 +68,6 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "pessoas", force: :cascade do |t|
-    t.string   "nom_pessoa"
-    t.datetime "dta_nascimento"
-    t.integer  "num_ano_inicial"
-    t.string   "des_endereco"
-    t.string   "num_telefone"
-    t.string   "num_celular"
-    t.string   "des_email"
-    t.string   "observacao"
-    t.integer  "tipo_pessoa_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "tios", force: :cascade do |t|
     t.string   "nome"
     t.date     "data_nascimento"
@@ -96,18 +77,6 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.string   "celular"
     t.string   "email"
     t.string   "observacao"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "tipo_financeiros", force: :cascade do |t|
-    t.string   "des_tipo_financeiro"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
-
-  create_table "tipo_pessoas", force: :cascade do |t|
-    t.string   "des_tipo_pessoa"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
