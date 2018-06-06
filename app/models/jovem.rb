@@ -5,10 +5,13 @@ class Jovem < ApplicationRecord
     
     #presence_of torna o campo obrigatório!
     #validates_presence_of :data_nascimento
+    #validates :data_nascimento, presence: true, :numericality => {:greater_than => 1950,  message: 'Ano de nascimento válido apartir de 1950!' }
     
     validates :ano_inicio, presence: {message: 'ano deve ser informado!'},
                            numericality: {message: 'deve conter sommente número!'}, #validates_numericality_of valida se foi digitado só número!
                            length: {maximum: 4, message: 'deve conter no máximo 4 números!'}
+                           
+    validates :ano_inicio, presence: true, :numericality => {:greater_than => 2000,  message: 'Ano válido apartir de 2000!' }
                            
     #length_of valida ou limita o tamanho ou a quantidade de caracteres informado no campo!
     validates_length_of :ano_inicio, minimum: 4, message: 'deve conter no mínimo 4 números!'
