@@ -1,14 +1,12 @@
 RailsAdmin.config do |config|
-  
-  config.main_app_name = ["EJC Santo Antônio Vila Belém", ""]
 
   ### Popular gems integration
 
   ## == Devise ==
-  config.authenticate_with do
-    warden.authenticate! scope: :usuario
-  end
-  config.current_user_method(&:current_usuario)
+  # config.authenticate_with do
+  #   warden.authenticate! scope: :user
+  # end
+  # config.current_user_method(&:current_user)
 
   ## == Cancan ==
   # config.authorize_with :cancan
