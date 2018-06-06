@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  
-  mount RailsAdmin::Engine => '/Y', as: 'rails_admin'
+
   resources :contas_a_recebers
   resources :contas_a_pagars
   resources :tios
