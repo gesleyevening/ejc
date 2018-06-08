@@ -1,0 +1,217 @@
+adicionar as gems no Gemfile para gerar PDF usando cancancan
+
+gem 'cancancan'
+gem 'carrierware'
+
+# Gem para gerar PDF
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff', '~> 0.7.0'
+gem 'rmagick', '~> 2.16'
+
+
+executar bundle install (se der algum erro executar os comandos abaixo)
+
+sudo apt-get update
+
+sudo apt-get install libmagickcore-dev
+
+sudo apt-get install libmagickwand-dev
+
+bundle install
+
+DEPOIS QUE TUDO DER SUCESSO, EXECUTE O COMANDO:
+sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev (dependências do gruff)
+
+#Adicionar fotos no Admin (Enviar fotos para a aplicação)
+gem 'carrierwave'
+
+RODAR OS COMANDOS
+bundle install  //instala as gems
+
+rails generate uploader Foto  //(gerador do uploader)
+
+rails g migration add_foto_to_evento foto:string   //Adiciona foto ao Evento
+
+ADICIONAR A LINHA DE COMANDO AO ARQUIVO: /app/models/evento.rb
+mount_uploader :foto, FotoUploader
+
+rake db:migrate  //Roda o Migrate para adicionar o campo Foto na tabela Evento
+
+rails_admin.rb
+
+# Gerar PDF
+  require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
+  RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
+ 
+  ### Popular gems integration
+ 
+  ## == Devise ==
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&current_user)
+ 
+  ## == Cancan ==
+  config.authorize_with :cancan
+ 
+  ## == Pundit ==
+  # config.authorize_with :pundit
+ 
+  ## == PaperTrail ==
+  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail = 3.0.0
+ 
+  ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
+ 
+  ## == Gravatar integration ==
+  ## To disable Gravatar integration in Navigation Bar set to false
+  # config.show_gravatar true
+ 
+  config.navigation_static_links = {
+    'EJC Santo Antônio Vila Belém' => 'http://0.0.0.0:8080/tios'
+  }
+  config.navigation_static_label = "Lins Úteis"
+ 
+  config.main_app_name = ["Tios", ""]
+ 
+  config.model Tios do
+    navigation_icon 'fa fa-money'
+    create do
+      field  :client
+      field  :sale_date
+      field  :discount
+      field  :observacao
+      field  :product_quantities
+ 
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+ 
+    edit do
+      field  :client
+      field  :sale_date
+      field  :discount
+      field  :observacao
+      field  :product_quantities
+ 
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+  end
+ 
+  config.model Jovems do
+    create do
+      field  :nome
+      field  :company_name
+      field  :document
+      field  :email
+      field  :celular
+      field  :telefone
+      field  :ano_inicio
+      field  :endereco
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+ 
+    edit do
+      field  :nome
+      field  :company_name
+      field  :document
+      field  :email
+      field  :celular
+      field  :telefone
+      field  :ano_inicio
+      field  :endereco
+ 
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+ 
+    list do
+      field  :nome
+      field  :company_name
+      field  :document
+      field  :email
+      field  :celular
+      field  :telefone
+      field  :ano_inicio
+      field  :endereco
+ 
+    end
+  end
+ 
+ 
+  config.model Tio do
+    parent Tio
+  end
+ 
+  config.model Jovem do
+    parent Usuario
+    weight -2
+  end
+ 
+  config.model Usuario do
+    parent Usuario
+    weight -1
+  end
+ 
+  config.model Tio do
+    parent Usuario
+  end
+ 
+  config.model ProductQuantity do
+    visible false
+  end
+ 
+  config.model Address do
+    visible false
+  end
+ 
+ 
+  config.model Tio do
+    edit do
+      field :nome
+      field :ano_inicio
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+  end
+ 
+ 
+  config.actions do
+    dashboard                     # mandatory
+    index                         # mandatory
+    new
+    export
+    bulk_delete
+    show
+    edit
+    delete
+    show_in_app
+    #coloca o PDF como uma customAction apenas para o model Usuário
+    pdf do
+      only Usuario
+    end
+ 
+    ## With an audit adapter, you can add:
+    # history_index
+    # history_show
+  end

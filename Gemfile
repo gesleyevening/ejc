@@ -37,7 +37,14 @@ gem 'remotipart', github:'mshibuya/remotipart'
 gem 'rails_admin', github:'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
 gem 'devise'
-gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
+gem 'cancancan'
+gem 'carrierwave'
+
+# Gem para gerar PDF
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff', '~> 0.7.0'
+gem 'rmagick', '~> 2.16'
 
 group :production do
   gem 'pg', '0.18.4'
