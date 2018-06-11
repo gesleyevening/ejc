@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'remotipart', github:'mshibuya/remotipart'
 gem 'rails_admin', github:'sferik/rails_admin'
-gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
+gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'  #Mudar o visual do rails admin
 gem 'devise'
 gem 'cancancan'
 gem 'carrierwave'

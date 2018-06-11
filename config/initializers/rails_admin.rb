@@ -2,6 +2,51 @@ RailsAdmin.config do |config|
   
   config.main_app_name = ["EJC Santo Antônio Vila Belém", ""]
   
+  #Cria uma categoria que salva links externos a aplicação
+  config.navigation_static_links = {
+    'Ejc Santo Antônio Vila Belém' => 'https://www.facebook.com/profile.php?id=100004820538209'
+  }
+  
+  config.navigation_static_label = "Links Úteis"
+  
+  #ícones
+  config.model ContasAPagar do
+    navigation_icon 'fa fa-money'
+  end
+  
+  config.model ContasAReceber do
+    navigation_icon 'fa fa-money'
+  end
+  
+  config.model Equipe do
+    navigation_icon 'fa fa-users'
+  end
+  
+  config.model Evento do
+    navigation_icon 'fa fa-newspaper-o'
+  end
+  
+  config.model Jovem do
+    parent Equipe
+    weight -2
+    navigation_icon 'fa fa-universal-access'
+  end
+  
+  config.model Tio do
+    parent Equipe
+    weight -1
+    navigation_icon 'fa fa-male'
+  end
+  
+  config.model Usuario do
+    navigation_icon 'fa fa-address-book-o'
+  end
+  
+  #config.model LinksUteis do
+  #  navigation_icon 'fa fa-external-link-square'
+  #end
+  
+  
   ## == Cancan ==
   #config.authorize_with :cancan
 
