@@ -81,6 +81,8 @@ git clone https://github.com/rollincode/rails_admin_theme.git
 #Entrar na pasta rails_admin_theme
 cd rails_admin_theme
 
+#git remote set-url origin https://github.com/gesleyevening/rollincode_custom.git
+
 
 # Gerar PDF
   require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
