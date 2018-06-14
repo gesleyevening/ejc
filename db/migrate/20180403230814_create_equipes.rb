@@ -3,7 +3,7 @@ class CreateEquipes < ActiveRecord::Migration[5.0]
     create_table :equipes do |t|
       t.integer :ano
       t.string :nome
-      t.string :observacoes
+      t.text :observacoes
       t.string :integrantes
 
       t.timestamps
