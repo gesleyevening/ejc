@@ -1,9 +1,9 @@
 pt-BR:
   date:
     formats:
-      default: "%Y-%m-%d"
-      short: "%b %d"
-      long: "%B %d, %Y"
+      default: ! '%d/%m/%Y'
+      long: ! '%d %B %Y'
+      short: ! '%d %b'
   datetime:
     distance_in_words:
       x_days:
