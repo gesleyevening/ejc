@@ -35,9 +35,17 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'remotipart', github:'mshibuya/remotipart'
 gem 'rails_admin', github:'sferik/rails_admin'
-gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
+gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'  #Mudar o visual do rails admin
+#gem 'rails_admin_rollincode', :git => 'git@github.com:gesleyevening/rollincode_custom.git'
 gem 'devise'
-gem 'rails_admin_rollincode', '~> 1.2', '>= 1.2.1'
+gem 'cancancan'
+gem 'carrierwave'
+
+# Gem para gerar PDF
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff', '~> 0.7.0'
+gem 'rmagick'
 
 group :production do
   gem 'pg', '0.18.4'

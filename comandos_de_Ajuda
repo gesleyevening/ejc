@@ -1,0 +1,246 @@
+#adicionar as gems no Gemfile para gerar PDF usando cancancan // Gemfile
+
+gem 'cancancan'
+gem 'carrierware'
+
+# Gem para gerar PDF // Gemfile
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff', '~> 0.7.0'
+gem 'rmagick', '~> 2.16'
+
+
+executar bundle install (se der algum erro executar os comandos abaixo)
+
+sudo apt-get update
+
+sudo apt-get install libmagickcore-dev
+
+sudo apt-get install libmagickwand-dev
+
+bundle install
+
+#DEPOIS QUE TUDO DER SUCESSO, EXECUTE O COMANDO:
+sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev (dependências do gruff)
+
+#Adicionar fotos no Admin (Enviar fotos para a aplicação) // Gemfile
+gem 'carrierwave'
+
+#RODAR OS COMANDOS
+bundle install  //instala as gems
+
+rails generate uploader Foto  //(gerador do uploader)
+
+rails g migration add_foto_to_evento foto:string   //Adiciona foto ao Evento
+
+#ADICIONAR A LINHA DE COMANDO AO ARQUIVO: /app/models/evento.rb
+mount_uploader :foto, FotoUploader
+
+rake db:migrate  //Roda o Migrate para adicionar o campo Foto na tabela Evento
+
+rails_admin.rb
+
+#ícones  // rails_admin.rb
+  config.model ContasAPagar do
+    navigation_icon 'fa fa-money'
+  end
+  
+#Mudar o nome dos models e de seus atributos para ficar do jeito que você quiser! // pt-BR.yml
+  activerecord:
+    models:
+      contas_a_pagar:
+        one: ContasAPagar
+        other: Contas a Pagar
+    attributes:
+      contas_a_pagar:
+        data_lancamento: "Data de Lançamento"
+        descricao: "Descrição"
+
+
+#GEM QUE MUDA O VISUAL DO RAILS ADMIN
+gem 'rails_admin_rollincode', '~> 1.0' // Gemfile
+
+APÓS RODA O COMENDO
+bundle install
+
+#Adicionar ao arquivo “/config/application.rb”
+ENV['RAILS_ADMIN_THEME'] = 'rollincode'
+
+#Rodar no console:
+rake assets:clean && rake assets:precompile
+
+#CRIAR UMA PASTA
+mkdir gem_custom
+
+#Entrar na pasta gem_custom
+cd gem_custom
+
+#Clonar projeto do github
+git clone https://github.com/rollincode/rails_admin_theme.git
+
+#Entrar na pasta rails_admin_theme
+cd rails_admin_theme
+
+#git remote set-url origin https://github.com/gesleyevening/rollincode_custom.git
+
+
+# Gerar PDF
+  require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
+  RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
+ 
+  ### Popular gems integration
+ 
+  ## == Devise ==
+  config.authenticate_with do
+    warden.authenticate! scope: :usuario
+  end
+  config.current_usuario_method(&current_usuario)
+ 
+  ## == Cancan ==
+  config.authorize_with :cancan
+ 
+  ## == Pundit ==
+  # config.authorize_with :pundit
+ 
+  ## == PaperTrail ==
+  # config.audit_with :paper_trail, 'Usuario', 'PaperTrail::Version' # PaperTrail = 3.0.0
+ 
+  ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
+ 
+  ## == Gravatar integration ==
+  ## To disable Gravatar integration in Navigation Bar set to false
+  # config.show_gravatar true
+ 
+  config.navigation_static_links = {
+    'EJC Santo Antônio Vila Belém' => 'http://0.0.0.0:8080/tios'
+  }
+  config.navigation_static_label = "Lins Úteis"
+ 
+  config.main_app_name = ["EJC Santo Antônio Vila Belém", ""]
+ 
+  config.model Tios do
+    navigation_icon 'fa fa-universal-access'
+    create do
+      field  :contas_a_pagar
+      field  :contas_a_receber
+      field  :equipe
+      field  :evento
+      field  :jovem
+      field  :tio
+      field  :usuario
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_usuario.id
+        end
+      end
+    end
+ 
+    edit do
+      field  :contas_a_pagar
+      field  :contas_a_receber
+      field  :equipe
+      field  :evento
+      field  :jovem
+      field  :tio
+      field  :usuario
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_usuario.id
+        end
+      end
+    end
+  end
+ 
+  config.model Jovem do
+    create do
+      field  :nome
+      field  :data_nascimento
+      field  :ano_inicio
+      field  :endereco
+      field  :telefone
+      field  :celular
+      field  :email
+      field  :observacao
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_usuario.id
+        end
+      end
+    end
+ 
+    edit do
+      field  :nome
+      field  :data_nascimento
+      field  :ano_inicio
+      field  :endereco
+      field  :telefone
+      field  :celular
+      field  :email
+      field  :observacao
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_usuario.id
+        end
+      end
+    end
+ 
+    list do
+      field  :nome
+      field  :data_nascimento
+      field  :ano_inicio
+      field  :endereco
+      field  :telefone
+      field  :celular
+      field  :email
+      field  :observacao
+    end
+    
+  end
+  
+ 
+  config.model ProductQuantity do
+    visible false
+  end
+ 
+  config.model Address do
+    visible false
+  end
+ 
+ 
+  config.model Tio do
+    edit do
+      field :nome
+      field :ano_inicio
+ 
+      field :usuario_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+  end
+ 
+ 
+  config.actions do
+    dashboard                     # mandatory
+    index                         # mandatory
+    new
+    export
+    bulk_delete
+    show
+    edit
+    delete
+    show_in_app
+    #coloca o PDF como uma customAction apenas para o model Usuário
+    pdf do
+      only Usuario
+    end
+ 
+    ## With an audit adapter, you can add:
+    # history_index
+    # history_show
+  end

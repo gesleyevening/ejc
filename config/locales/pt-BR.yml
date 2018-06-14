@@ -9,19 +9,57 @@ pt-BR:
       x_days:
         one: "1 dias"
         other: "%{count} dias"
+  #Mudar o nome dos models e de seus atributos para ficar do jeito que você quiser! 
   activerecord:
     models:
-      client:
-        one: Cliente
-        other: Clientes
+      contas_a_pagar:
+        one: ContasAPagar
+        other: Contas a Pagar
+      contas_a_receber:
+        one: ContasAReceber
+        other: Contas a Receber
+      equipe:
+        one: Equipe
+        other: Equipes
+      evento:
+        one: Evento
+        other: Eventos
+      jovem:
+        one: Jovem
+        other: Jovens
+      tio:
+        one: Tio
+        other: Tios
+      usuario:
+        one: Usuario
+        other: Usuários
     attributes:
-      client:
-        name: "Nome"
-        company_name: "Nome da Empresa"
+      contas_a_pagar:
+        data_lancamento: "Data de Lançamento"
+        descricao: "Descrição"
+      contas_a_receber:
+        data_lancamento: "Data de Lançamento"
+        descricao: "Descrição"
+      equipe:
+        observacoes: "Observações"
+      evento:
+        titulo: "Título"
+        dta_evento: "Data do Evento"
+        informacoes: "Informações"
+      jovem:
+        data_nascimento: "Data de Nascimento"
+        ano_inicio: "Ano de Início"
+        endereco: "Endereço"
+        observacao: "Observação"
+      tio:
+        data_nascimento: "Data de Nascimento"
+        ano_inicio: "Ano de Início"
+        endereco: "Endereço"
+        observacao: "Observação"
   views:
   admin:
     home:
-      name: Home
+      name: Início
     pagination:
       previous: "« Anterior"
       next: "Próximo »"
@@ -38,11 +76,11 @@ pt-BR:
       chosen: "%{name} escolhido"
       chose_all: "Escolher tudo"
       clear_all: "Limpar tudo"
-      up: "Cima"
-      down: "Baixo"
+      up: "Acima"
+      down: "Abaixo"
       navigation: "Navegação"
       log_out: "Terminar Sessão"
-      ago: "atrás"
+      ago: "Atrás"
     flash:
       successful: "%{name} %{action} com sucesso"
       error: "%{name} %{action} sem sucesso"
@@ -115,7 +153,7 @@ pt-BR:
     form:
       cancel: "Cancelar"
       basic_info: "Informação Básica"
-      required: "Obrigatórios"
+      required: "Obrigatório"
       optional: "Opcional"
       one_char: "caracter"
       char_length_up_to: "comprimento até"
