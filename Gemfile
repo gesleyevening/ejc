@@ -42,6 +42,8 @@ gem 'cancancan'
 gem 'carrierwave'
 
 # Gem para gerar PDF
+gem 'prawn-rails'
+# Gem para gerar os gráficos
 
 
 group :production do
