@@ -7,6 +7,8 @@ class Equipe < ApplicationRecord
     #length_of valida ou limita o tamanho ou a quantidade de caracteres informado no campo!
     validates_length_of :ano, minimum: 4, message: 'deve conter no mínimo 4 números!'
     
+    validates :ano, presence: true, :numericality => {:greater_than => 0,  message: 'ano não pode ser zero ou negativo!' }
+    
     validates :nome, presence: {message: 'nome deve ser informado!'},
                      length: {in: 5..100, message: 'deve conter entre 5 e 100 caracteres!'}
     

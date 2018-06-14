@@ -1,5 +1,7 @@
 class Evento < ApplicationRecord
     
+    mount_uploader :foto, FotoUploader
+    
     validates :titulo, presence: {message: 'nome do evennto deve ser informado!'},
                        length: {in: 5..100, message: 'deve conter entre 5 e 100 caracteres!'}
     
