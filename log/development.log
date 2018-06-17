@@ -15675,138 +15675,203 @@ Processing by InicioController#index as HTML
 Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 10.240.0.231 at 2018-06-14 01:02:33 +0000
-Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-  
-ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE type IN ('table','view') AND name <> 'sqlite_sequence' AND name = 'schema_migrations'):
-  
-sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
-sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
-sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:196:in `block in exec_query'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
-activesupport (5.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:193:in `exec_query'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract/database_statements.rb:69:in `select_rows'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract/database_statements.rb:63:in `select_values'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:285:in `data_source_exists?'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:276:in `table_exists?'
-activerecord (5.0.7) lib/active_record/migration.rb:1030:in `block in get_all_versions'
-activesupport (5.0.7) lib/active_support/deprecation/reporting.rb:36:in `silence'
-activesupport (5.0.7) lib/active_support/deprecation/instance_delegator.rb:20:in `silence'
-activerecord (5.0.7) lib/active_record/migration.rb:1029:in `get_all_versions'
-activerecord (5.0.7) lib/active_record/migration.rb:1043:in `needs_migration?'
-activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
-activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
-activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
-activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
-activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
-actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.4) lib/rack/method_override.rb:22:in `call'
-rack (2.0.4) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.7) lib/rails/engine.rb:522:in `call'
-puma (3.11.3) lib/puma/configuration.rb:225:in `call'
-puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.3) lib/puma/server.rb:438:in `process_client'
-puma (3.11.3) lib/puma/server.rb:302:in `block in run'
-puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.9ms)
-Started GET "/" for 10.240.0.171 at 2018-06-14 01:03:49 +0000
-Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-  
-ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE type IN ('table','view') AND name <> 'sqlite_sequence' AND name = 'schema_migrations'):
-  
-sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
-sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
-sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:196:in `block in exec_query'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
-activesupport (5.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:193:in `exec_query'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract/database_statements.rb:69:in `select_rows'
-activerecord (5.0.7) lib/active_record/connection_adapters/abstract/database_statements.rb:63:in `select_values'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:285:in `data_source_exists?'
-activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:276:in `table_exists?'
-activerecord (5.0.7) lib/active_record/migration.rb:1030:in `block in get_all_versions'
-activesupport (5.0.7) lib/active_support/deprecation/reporting.rb:36:in `silence'
-activesupport (5.0.7) lib/active_support/deprecation/instance_delegator.rb:20:in `silence'
-activerecord (5.0.7) lib/active_record/migration.rb:1029:in `get_all_versions'
-activerecord (5.0.7) lib/active_record/migration.rb:1043:in `needs_migration?'
-activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
-activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
-activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
-activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
-activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
-actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.4) lib/rack/method_override.rb:22:in `call'
-rack (2.0.4) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.7) lib/rails/engine.rb:522:in `call'
-puma (3.11.3) lib/puma/configuration.rb:225:in `call'
-puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.3) lib/puma/server.rb:438:in `process_client'
-puma (3.11.3) lib/puma/server.rb:302:in `block in run'
-puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.0ms)
-Started GET "/" for 10.240.1.60 at 2018-06-14 01:06:45 +0000
+Started GET "/" for 10.240.0.207 at 2018-06-14 01:00:21 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InicioController#index as HTML
+  Rendering inicio/index.html.erb within layouts/application
+  Rendered inicio/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 705ms (Views: 687.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.1.60 at 2018-06-14 01:00:59 +0000
 Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.0.118 at 2018-06-14 01:00:59 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 92ms (Views: 72.5ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/" for 10.240.2.147 at 2018-06-14 01:08:45 +0000
+Cannot render console from 10.240.2.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InicioController#index as HTML
+  Rendering inicio/index.html.erb within layouts/application
+  Rendered inicio/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 481ms (Views: 465.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 10.240.1.78 at 2018-06-14 01:08:48 +0000
+Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 10.240.0.171 at 2018-06-14 01:08:48 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 82ms (Views: 66.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios/sign_in" for 10.240.0.68 at 2018-06-14 01:08:57 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xiuSEIV9RrZJQd3pm+l8mh1m25jq57tE5muwDPGwC/N3pmh6QZUp+ENAgr9I2gPGtt7bGa9D4I7NNvoM9St1Jg==", "usuario"=>{"email"=>"ejc@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "ejc@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "usuarios" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["current_sign_in_at", "2018-06-14 01:08:57.390201"], ["last_sign_in_at", "2018-06-13 15:29:43.181447"], ["current_sign_in_ip", "10.240.0.68"], ["last_sign_in_ip", "10.240.1.21"], ["sign_in_count", 16], ["updated_at", "2018-06-14 01:08:57.392113"], ["id", 1]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/admin/
+Completed 302 Found in 265ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/admin/" for 10.240.2.147 at 2018-06-14 01:08:57 +0000
+Cannot render console from 10.240.2.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jovems"[0m
+  [1m[36mJovem Load (0.2ms)[0m  [1m[34mSELECT  "jovems".* FROM "jovems" ORDER BY "jovems"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tios"[0m
+  [1m[36mTio Load (0.2ms)[0m  [1m[34mSELECT  "tios".* FROM "tios" ORDER BY "tios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "contas_a_pagars"[0m
+  [1m[36mContasAPagar Load (0.2ms)[0m  [1m[34mSELECT  "contas_a_pagars".* FROM "contas_a_pagars" ORDER BY "contas_a_pagars"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "contas_a_recebers"[0m
+  [1m[36mContasAReceber Load (0.2ms)[0m  [1m[34mSELECT  "contas_a_recebers".* FROM "contas_a_recebers" ORDER BY "contas_a_recebers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "equipes"[0m
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT  "equipes".* FROM "equipes" ORDER BY "equipes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "eventos"[0m
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT  "eventos".* FROM "eventos" ORDER BY "eventos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (48.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (14.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (5.8ms)
+Completed 200 OK in 1048ms (Views: 322.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/admin/contas_a_pagar?_pjax=%5Bdata-pjax-container%5D" for 10.240.2.147 at 2018-06-14 01:09:05 +0000
+Cannot render console from 10.240.2.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"contas_a_pagar"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mContasAPagar Load (0.3ms)[0m  [1m[34mSELECT  "contas_a_pagars".* FROM "contas_a_pagars" ORDER BY contas_a_pagars.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (89.0ms)
+Completed 200 OK in 168ms (Views: 158.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/contas_a_pagar/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.116 at 2018-06-14 01:09:08 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"contas_a_pagar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (10.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (35.4ms)
+Completed 200 OK in 60ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/usuarios/sign_out" for 10.240.0.231 at 2018-06-14 01:09:14 +0000
+Cannot render console from 10.240.0.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1dOzk9td7Kka/YtzE4TBxXKoglNtDtSx2slRHT5LbfE0JR6xYTCk2Isk1RErvj7tNCOAF/EJ0n/xyq1/3+6jVg=="}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://ejc-admin-gesleyevening.c9users.io:8080/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.1.60 at 2018-06-14 01:09:15 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by InicioController#index as HTML
+  Rendering inicio/index.html.erb within layouts/application
+  Rendered inicio/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+Started GET "/" for 10.240.0.68 at 2018-06-14 01:20:07 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   
 ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE type IN ('table','view') AND name <> 'sqlite_sequence' AND name = 'schema_migrations'):
   
@@ -15864,14 +15929,14 @@ puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.9ms)
-Started GET "/" for 10.240.1.78 at 2018-06-14 01:11:31 +0000
-Cannot render console from 10.240.1.78! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.7ms)
+Started GET "/" for 10.240.0.42 at 2018-06-14 01:23:28 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   
 ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE type IN ('table','view') AND name <> 'sqlite_sequence' AND name = 'schema_migrations'):
   
@@ -15929,9 +15994,74 @@ puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.0ms)
+Started GET "/" for 10.240.0.118 at 2018-06-17 20:45:57 +0000
+Cannot render console from 10.240.0.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE type IN ('table','view') AND name <> 'sqlite_sequence' AND name = 'schema_migrations'):
+  
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:196:in `block in exec_query'
+activerecord (5.0.7) lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+activesupport (5.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.7) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:193:in `exec_query'
+activerecord (5.0.7) lib/active_record/connection_adapters/abstract/database_statements.rb:69:in `select_rows'
+activerecord (5.0.7) lib/active_record/connection_adapters/abstract/database_statements.rb:63:in `select_values'
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:285:in `data_source_exists?'
+activerecord (5.0.7) lib/active_record/connection_adapters/sqlite3_adapter.rb:276:in `table_exists?'
+activerecord (5.0.7) lib/active_record/migration.rb:1030:in `block in get_all_versions'
+activesupport (5.0.7) lib/active_support/deprecation/reporting.rb:36:in `silence'
+activesupport (5.0.7) lib/active_support/deprecation/instance_delegator.rb:20:in `silence'
+activerecord (5.0.7) lib/active_record/migration.rb:1029:in `get_all_versions'
+activerecord (5.0.7) lib/active_record/migration.rb:1043:in `needs_migration?'
+activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (39.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.8ms)
