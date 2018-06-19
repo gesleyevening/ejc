@@ -1,8 +1,7 @@
 class Usuario < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :rememberable, :trackable, :validatable
          
   validates :email, presence: {message: 'não pode ser deixado em branco!'}, 
                     length: {minimum: 8, message: 'deve conter no mínimos 8 caracteres!'}, 
