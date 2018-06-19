@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517003513) do
+ActiveRecord::Schema.define(version: 20180608135812) do
 
   create_table "contas_a_pagars", force: :cascade do |t|
     t.date     "data_lancamento"
-    t.string   "descricao"
+    t.text     "descricao"
     t.float    "valor"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180517003513) do
 
   create_table "contas_a_recebers", force: :cascade do |t|
     t.date     "data_lancamento"
-    t.string   "descricao"
+    t.text     "descricao"
     t.float    "valor"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20180517003513) do
   create_table "equipes", force: :cascade do |t|
     t.integer  "ano"
     t.string   "nome"
-    t.string   "observacoes"
+    t.text     "observacoes"
     t.string   "integrantes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -43,11 +43,12 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.string   "informacoes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "foto"
   end
 
   create_table "financeiros", force: :cascade do |t|
     t.date     "dta_lancamento"
-    t.string   "descricao"
+    t.text     "descricao"
     t.integer  "tipo_financeiro_id"
     t.datetime "criado_em"
     t.datetime "atualizado_em"
@@ -63,7 +64,7 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.string   "telefone"
     t.string   "celular"
     t.string   "email"
-    t.string   "observacao"
+    t.text     "observacao"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -76,7 +77,7 @@ ActiveRecord::Schema.define(version: 20180517003513) do
     t.string   "telefone"
     t.string   "celular"
     t.string   "email"
-    t.string   "observacao"
+    t.text     "observacao"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

@@ -5,6 +5,6 @@ class ContasAReceber < ApplicationRecord
     validates :descricao, presence: {message: 'deve conter uma descrição!'},
                           length: {in: 10..100, message: 'deve conter entre 10 e 100 caracteres!'}
                       
-    validates_presence_of :valor, message: 'valor deve ser informado!'
+    validates :valor, presence: true, :numericality => {:greater_than => 0,  message: 'valor não pode ser zero ou negativo!' }
     
 end

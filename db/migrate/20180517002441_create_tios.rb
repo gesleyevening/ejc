@@ -8,7 +8,7 @@ class CreateTios < ActiveRecord::Migration[5.0]
       t.string :telefone
       t.string :celular
       t.string :email
-      t.string :observacao
+      t.text :observacao
 
       t.timestamps
     end

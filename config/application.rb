@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+#Usar o visual da gem no rails admin
 ENV['RAILS_ADMIN_THEME'] = 'rollincode'
 
 module EjcAdmin
