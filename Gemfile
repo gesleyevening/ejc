@@ -43,7 +43,9 @@ gem 'carrierwave'
 
 # Gem para gerar PDF
 gem 'prawn-rails'
-
+# Gem para gerar os gráficos
+gem 'gruff', '~> 0.7.0'
+gem 'rmagick', '~> 2.16'
 
 group :production do
   gem 'pg', '0.18.4'
