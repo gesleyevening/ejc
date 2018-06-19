@@ -47,6 +47,16 @@ gem 'prawn-rails'
 # 'gruff', '~> 0.7.0'
 #gem 'rmagick', '~> 2.16.0'
 
+#Alterar layouts das telas
+#gem 'bootstrap-sass'
+gem 'devise-bootstrap-views'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+end
+
 group :production do
   gem 'pg', '0.18.4'
 end
