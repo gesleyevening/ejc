@@ -1,5 +1,6 @@
 class ContasAPagarsController < ApplicationController
   before_action :set_contas_a_pagar, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /contas_a_pagars
   # GET /contas_a_pagars.json
