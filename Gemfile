@@ -47,6 +47,10 @@ gem 'prawn-rails'
 gem 'gruff', '~> 0.7.0'
 gem 'rmagick', '~> 2.16'
 
+#Alterar layouts das telas
+gem 'bootstrap-sass'
+gem 'devise-bootstrap-views'
+
 group :production do
   gem 'pg', '0.18.4'
 end

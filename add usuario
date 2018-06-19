@@ -1,0 +1,3 @@
+rails console
+
+user = Usuario.create(email:'ejc@email.com', password:'123456')

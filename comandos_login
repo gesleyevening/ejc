@@ -1,0 +1,38 @@
+link da pagina:
+https://dankim.io/rails-admin-dashboard-devise-bootstrap/
+
+
+# Adicionar no Gemfile
+gem 'bootstrap-sass'
+gem 'devise-bootstrap-views'
+
+# no console, ir para a pasta stylesheets e exectuar o comando mv abaixo
+cd app/assets/stylesheets
+mv application.css application.scss
+
+#no arquivo app/assets/javascripts/application.js adicionar as linhas comentadas do jeito que está abaixo:
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require_tree .
+
+#executar o install no console
+bundle install
+
+#criar o arquivo app/assets/stylesheets/custom.scss com os codigos abaixo:
+.alert-notice {
+  @extend .alert-info !optional;
+}
+
+.alert-alert {
+  @extend .alert-danger !optional;
+}
+
+#no arquivo app/assets/stylesheets/application.scss adicionar as linhas abaixo:
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'devise_bootstrap_views';
+@import 'custom';
+
+#criar o layout da pagina de login
