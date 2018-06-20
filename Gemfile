@@ -44,8 +44,8 @@ gem 'carrierwave'
 # Gem para gerar PDF
 gem 'prawn-rails'
 # Gem para gerar os gráficos
-gem 'gruff', '~> 0.7.0'
-gem 'rmagick', '~> 2.16'
+# 'gruff', '~> 0.7.0'
+#gem 'rmagick', '~> 2.16.0'
 
 #Alterar layouts das telas
 gem 'bootstrap-sass'
@@ -82,3 +82,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+source 'https://rubygems.org'
+

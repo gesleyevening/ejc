@@ -9,7 +9,10 @@ class ContasAPagar < ApplicationRecord
                           length: {in: 10..100, message: 'deve conter entre 10 e 100 caracteres!'}
                       
     validates :valor, presence: true, :numericality => {:greater_than => 0,  message: 'valor não pode ser zero ou negativo!' }
+<<<<<<< HEAD
     
+=======
+>>>>>>> e71f2974648df523bb459e920ce734360d3b1bdd
     
 end
 
