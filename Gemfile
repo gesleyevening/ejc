@@ -48,7 +48,7 @@ gem 'prawn-rails'
 #gem 'rmagick', '~> 2.16.0'
 
 #Alterar layouts das telas
-#gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 gem 'devise-bootstrap-views'
 
 group :development, :test do
@@ -67,6 +67,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -83,5 +84,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.1'
-gem 'bootstrap-sass', '3.3.7'
