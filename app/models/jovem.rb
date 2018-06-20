@@ -1,6 +1,6 @@
 class Jovem < ApplicationRecord
     
-    validates_presence_of :nome, presence: {message: 'nome deve ser informado!'},
+    validates :nome, presence: {message: 'nome deve ser informado!'},
                      length: {in: 10..100, message: 'deve conter entre 10 e 100 caracteres!'}
     
     #presence_of torna o campo obrigatório!

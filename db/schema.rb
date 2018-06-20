@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20180608135812) do
     t.integer  "ano"
     t.string   "nome"
     t.text     "observacoes"
-    t.string   "integrantes"
+    t.text     "integrantes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

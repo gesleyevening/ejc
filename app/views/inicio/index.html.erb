@@ -75,90 +75,23 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 col-sm-6 eventos-item">
-            <a class="eventos-link" data-toggle="modal" href="#eventosModal1">
-              <div class="eventos-hover">
-                <div class="eventos-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+          <% @eventos.each do |e| %>
+            <div class="col-md-4 col-sm-6 eventos-item">
+              <a class="eventos-link">
+                <div class="eventos-hover">
+                  <div class="eventos-hover-content">
+                    <!--<i class="fa fa-plus fa-3x"></i>-->
+                  </div>
                 </div>
+                <img class="img-fluid" src="<%= e.foto %>" alt="" style="height: 200px;">
+              </a>
+              <div class="eventos-caption">
+                <h4><%= e.titulo %></h4>
+                <!--<p class="text-muted">Detalhes do evento</p>-->
               </div>
-              <img class="img-fluid" src="img/eventos/01-thumbnail.jpg" alt="">
-            </a>
-            <div class="eventos-caption">
-              <h4>Evento 01</h4>
-              <p class="text-muted">Detalhes do evento</p>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 eventos-item">
-            <a class="eventos-link" data-toggle="modal" href="#eventosModal2">
-              <div class="eventos-hover">
-                <div class="eventos-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/eventos/02-thumbnail.jpg" alt="">
-            </a>
-            <div class="eventos-caption">
-              <h4>Evento 02</h4>
-              <p class="text-muted">Detalhes do evento.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 eventos-item">
-            <a class="eventos-link" data-toggle="modal" href="#eventosModal3">
-              <div class="eventos-hover">
-                <div class="eventos-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/eventos/03-thumbnail.jpg" alt="">
-            </a>
-            <div class="eventos-caption">
-              <h4>Evento 03</h4>
-              <p class="text-muted">Detalhes do evento.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 eventos-item">
-            <a class="eventos-link" data-toggle="modal" href="#eventosModal4">
-              <div class="eventos-hover">
-                <div class="eventos-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/eventos/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="eventos-caption">
-              <h4>Evento 04</h4>
-              <p class="text-muted">Detalhes do evento.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 eventos-item">
-            <a class="eventos-link" data-toggle="modal" href="#eventosModal5">
-              <div class="eventos-hover">
-                <div class="eventos-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/eventos/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="eventos-caption">
-              <h4>Evento 05</h4>
-              <p class="text-muted">Detalhes do evento.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 eventos-item">
-            <a class="eventos-link" data-toggle="modal" href="#eventosModal6">
-              <div class="eventos-hover">
-                <div class="eventos-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/eventos/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="eventos-caption">
-              <h4>Evento 06</h4>
-              <p class="text-muted">Detalhes do evento</p>
-            </div>
-          </div>
+          <% end %>
+          
         </div>
       </div>
     </section>
@@ -169,7 +102,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Sobre nós</h2>
-            <h3 class="section-subheading text-muted">Paróquia.</h3>
+            <h3 class="section-subheading text-muted">EJC Vila Belém</h3>
           </div>
         </div>
         <div class="row">
@@ -184,7 +117,7 @@
                     <h4 class="subheading">Compromisso com a iluminação espiritual.</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">O(A) Paroquia é uma das principais congregações de São Paulo. Somos uma igreja vibrante que se dedica a atender às necessidades espirituais, educacionais e culturais da comunidade. Nosso(a) Igreja se baseia profundamente no Evangelho e estamos sempre de portas abertas para os integrantes da comunidade que buscam um lugar tranquilo para adoração. Entre em contato ou faça uma visita e saiba como entrar para a nossa congregação.</p>
+                    <p class="text-muted">O(A) Paroquia é uma das principais congregações de Belo Horizonte. Somos uma igreja vibrante que se dedica a atender às necessidades espirituais, educacionais e culturais da comunidade. Nosso(a) Igreja se baseia profundamente no Evangelho e estamos sempre de portas abertas para os integrantes da comunidade que buscam um lugar tranquilo para adoração. Entre em contato ou faça uma visita e saiba como entrar para a nossa congregação.</p>
                   </div>
                 </div>
               </li>
