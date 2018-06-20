@@ -10,6 +10,7 @@ class ContasAPagar < ApplicationRecord
                       
     validates_presence_of :valor, presence: true, :numericality => {:greater_than => 0,  message: 'valor não pode ser zero ou negativo!' }
     
+    
 end
 
 #https://stackoverflow.com/questions/32519096/rails-admin-date-add-more-accepting-formats
