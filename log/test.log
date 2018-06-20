@@ -351,3 +351,139 @@ Migrating to CreateFinanceiros (20180413204810)
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
 =======
 >>>>>>> 489bec98281b8a930031e2cb59eb83a002864171
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" = ? LIMIT ?[0m  [["email", "teste@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJovem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jovems" WHERE "jovems"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m

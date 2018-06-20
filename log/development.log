@@ -20957,3 +20957,96 @@ Processing by RailsAdmin::MainController#dashboard as HTML
 Completed 200 OK in 982ms (Views: 336.8ms | ActiveRecord: 7.6ms)
 
 
+Started GET "/admin/tio" for 10.240.0.42 at 2018-06-20 15:15:09 +0000
+Cannot render console from 10.240.0.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"tio"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mTio Load (0.4ms)[0m  [1m[34mSELECT  "tios".* FROM "tios" ORDER BY tios.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (70.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (21.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (34.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (65.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (35.3ms)
+Completed 200 OK in 2133ms (Views: 1208.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/tio/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-06-20 15:15:18 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"tio"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_text.html.haml (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (11.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (79.9ms)
+Completed 200 OK in 112ms (Views: 99.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/tio/new" for 10.240.0.68 at 2018-06-20 15:54:35 +0000
+Cannot render console from 10.240.0.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZy4EA/GYTmdPeme478PP01m0xrhdJN4aCd7HLWH4nVWRDd2A7QwkHz3Z0MWa9xcWdkDPh6RA9svtDxPNZs+Jg==", "tio"=>{"nome"=>"teste", "data_nascimento"=>"20 Junho 2018", "ano_inicio"=>"1999", "endereco"=>"", "telefone"=>"", "celular"=>"31313131313", "email"=>"sssss.com", "observacao"=>""}, "return_to"=>"http://ejc-pablodias-henrichpablo.c9users.io:8080/admin/tio", "_save"=>"", "model_name"=>"tio"}
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTio Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tios" WHERE "tios"."email" = ? LIMIT ?[0m  [["email", "sssss.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_text.html.haml (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (78.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_navigation.html.haml (16.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/layouts/rails_admin/pjax.html.haml (10.2ms)
+Completed 406 Not Acceptable in 370ms (Views: 336.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/jovem?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.116 at 2018-06-20 15:58:21 +0000
+Cannot render console from 10.240.0.116! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"jovem"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mJovem Load (0.3ms)[0m  [1m[34mSELECT  "jovems".* FROM "jovems" ORDER BY jovems.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (40.6ms)
+Completed 200 OK in 77ms (Views: 56.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/jovem/new?_pjax=%5Bdata-pjax-container%5D" for 10.240.0.171 at 2018-06-20 15:58:23 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"jovem"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_datetime.html.haml (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_form_text.html.haml (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/_submit_buttons.html.haml (10.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/bundler/gems/rails_admin-c903d2e1702c/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (52.5ms)
+Completed 200 OK in 77ms (Views: 69.5ms | ActiveRecord: 0.3ms)
+
+
